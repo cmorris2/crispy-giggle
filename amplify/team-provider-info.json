@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-greatestappever-dev-142932-authRole",
+      "UnauthRoleArn": "arn:aws:iam::473139064041:role/amplify-greatestappever-dev-142932-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::473139064041:role/amplify-greatestappever-dev-142932-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-greatestappever-dev-142932-deployment",
+      "UnauthRoleName": "amplify-greatestappever-dev-142932-unauthRole",
+      "StackName": "amplify-greatestappever-dev-142932",
+      "StackId": "arn:aws:cloudformation:us-east-2:473139064041:stack/amplify-greatestappever-dev-142932/470f3cb0-30ef-11eb-a6f4-0aa874bc8df2",
+      "AmplifyAppId": "d1h2d6d3rovfin"
+    },
+    "categories": {
+      "auth": {
+        "greatestappever3f161049": {}
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "auth": {
+    "greatestappever3f161049": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  }
+}
