@@ -39,4 +39,5 @@ amplify-gradle-config.json
 amplifytools.xcconfig
 amplify/team-provider-info.json
 
+#visualstudio
 .eslintcache
