@@ -11,6 +11,8 @@ function App() {
   const [notes, setNotes] = useState([]);
   const [formData, setFormData] = useState(initialFormState);
 
+  console.log("made it here");
+
   useEffect(() => {
     fetchNotes();
   }, []);
@@ -35,6 +37,14 @@ function App() {
 
   return (
     <div className="App">
+      <div id="videoID">
+      <iframe src=''
+        frameBorder='0'
+        allow='autoplay; encrypted-media'
+        allowFullScreen
+        title='video'
+      />
+      </div>
       <h1>My Notes App</h1>
       <input
         onChange={e => setFormData({ ...formData, 'name': e.target.value})}
