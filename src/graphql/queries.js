@@ -30,3 +30,38 @@ export const listNotes = /* GraphQL */ `
     }
   }
 `;
+export const getSpotlightVideo = /* GraphQL */ `
+  query GetSpotlightVideo($id: ID!) {
+    getSpotlightVideo(id: $id) {
+      id
+      link
+      name
+      videoId
+      beginAt
+      isFinishedPlaying
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const listSpotlightVideos = /* GraphQL */ `
+  query ListSpotlightVideos(
+    $filter: ModelspotlightVideoFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listSpotlightVideos(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        link
+        name
+        videoId
+        beginAt
+        isFinishedPlaying
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+  }
+`;
