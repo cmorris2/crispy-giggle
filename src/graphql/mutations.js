@@ -55,6 +55,7 @@ export const createSpotlightVideo = /* GraphQL */ `
       videoId
       beginAt
       isFinishedPlaying
+      duration
       createdAt
       updatedAt
     }
@@ -72,6 +73,7 @@ export const updateSpotlightVideo = /* GraphQL */ `
       videoId
       beginAt
       isFinishedPlaying
+      duration
       createdAt
       updatedAt
     }
@@ -89,6 +91,7 @@ export const deleteSpotlightVideo = /* GraphQL */ `
       videoId
       beginAt
       isFinishedPlaying
+      duration
       createdAt
       updatedAt
     }

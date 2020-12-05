@@ -11,4 +11,5 @@ type spotlightVideo @model {
   videoId: String
   beginAt: String
   isFinishedPlaying: Boolean
+  duration: String
 }
