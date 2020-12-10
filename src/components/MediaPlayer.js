@@ -24,7 +24,7 @@ function MediaPlayer(props) {
        ).subscribe({
            next: ({ provider, value }) => {
              console.log("subscription UPDATE!")
-             console.log(value.data.onUpdateSpotlightVideo)
+             console.log(value.data)
              setSpotlightVideo(value.data.onUpdateSpotlightVideo)
              }  
    });
@@ -61,23 +61,11 @@ function MediaPlayer(props) {
    }
 
 
-  //   const subscription = API.graphql(
-  //     graphqlOperation(onUpdateSpotlightVideo)
-  // ).subscribe({
-  //     next: ({ provider, value }) => {
-  //       console.log("subscription UPDATE!")
-  //       console.log(value.data.onUpdateSpotlightVideo)
-  //       }
-  // });
-
-
-
-
 
 
   return (
     <div className="videoPlayer">
-      <Video  link={spotlightVideo.link}/>
+      <Video  link={spotlightVideo.videoId} beginAt={spotlightVideo.beginAt}/>
     </div>
   );
 }

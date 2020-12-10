@@ -9,7 +9,7 @@ type spotlightVideo @model {
   link: String
   name: String
   videoId: String
-  beginAt: String
+  beginAt: String @function(name: "videoTimerFunction-${env}")
   isFinishedPlaying: Boolean
   duration: Int
 }

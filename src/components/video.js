@@ -5,11 +5,14 @@ import { onUpdateSpotlightVideo } from '../graphql/subscriptions';
 
 function Video(props) {
 
+  let link = "http://www.youtube.com/embed/" + props.link + "?enablejsapi=1&origin=http://example.com&autoplay=1&autoplay='1'&mute=1&&start=" + props.beginAt
+  console.log(link)
+
   return (
     <div className="videoPlayer">
       <div id="videoID">
-      <iframe key={props.link} id="player" type="text/html" width="640" height="390"
-        src={props.link}
+      <iframe key={link} id="player" type="text/html" width="640" height="390"
+        src={link}
         frameborder="0" title="videoTitle"></iframe>
       </div>
     </div>
