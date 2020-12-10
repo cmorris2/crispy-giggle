@@ -5,7 +5,7 @@ import { onUpdateSpotlightVideo } from '../graphql/subscriptions';
 
 function Video(props) {
 
-  let link = "http://www.youtube.com/embed/" + props.link + "?enablejsapi=1&origin=https://dev.d1h2d6d3rovfin.amplifyapp.com&autoplay=1&autoplay='1'&mute=1&&start=" + props.beginAt
+  let link = "https://www.youtube.com/embed/" + props.link + "?enablejsapi=1&origin=https://dev.d1h2d6d3rovfin.amplifyapp.com&autoplay=1&autoplay='1'&mute=1&&start=" + props.beginAt
   console.log(link)
 
   return (
