@@ -8,12 +8,26 @@ import { listSpotlightVideos } from '../graphql/queries';
 import { createSpotlightVideo as createSpotlightVideoMutation } from '../graphql/mutations';
 import { onUpdateSpotlightVideo } from '../graphql/subscriptions';
 import Video from './video'
+import RealtimeButton from './realtimeButton'
+import YouTube from 'react-youtube';
 
 const initialSpotlightVideo = { name: '', description: '', id: '', beginAt:'', link:"" }
+const initialStatus = { realtime: true }
 //const initialFormState = { videoId: '', name: '' }
 
 function MediaPlayer(props) {
   const [spotlightVideo, setSpotlightVideo] = useState(initialSpotlightVideo)
+  const [status, setStatus] = useState(initialStatus)
+
+  const opts = {
+    height: '390',
+    width: '640',
+    playerVars: {
+      // https://developers.google.com/youtube/player_parameters
+      autoplay: 1,
+      start: spotlightVideo.beginAt
+    },
+  };
   
   //const [formData, setFormData] = useState(initialFormState);
 
@@ -60,12 +74,21 @@ function MediaPlayer(props) {
      setSpotlightVideo(apiData.data.listSpotlightVideos.items[0])
    }
 
+   function updateRealtime(){
+     console.log("you are not watching in real time")
+   }
+
 
 
 
   return (
     <div className="videoPlayer">
-      <Video  link={spotlightVideo.videoId} beginAt={spotlightVideo.beginAt}/>
+      <RealtimeButton/>
+      <YouTube 
+        videoId={spotlightVideo.videoId}
+        opts={opts}
+        onPause={updateRealtime}
+        />
     </div>
   );
 }

@@ -1,20 +1,29 @@
 import '../App.css';
 import { API, graphqlOperation } from 'aws-amplify';
 import { onUpdateSpotlightVideo } from '../graphql/subscriptions';
+import React, { useState, useEffect } from 'react';
+import YouTube from 'react-youtube';
+
 
 
 function Video(props) {
 
-  let link = "https://www.youtube.com/embed/" + props.link + "?enablejsapi=1&origin=https://dev.d1h2d6d3rovfin.amplifyapp.com&autoplay=1&autoplay='1'&mute=1&&start=" + props.beginAt
-  console.log(link)
+  const opts = {
+    height: '390',
+    width: '640',
+    playerVars: {
+      // https://developers.google.com/youtube/player_parameters
+      autoplay: 1,
+      start: props.beginAt
+    },
+  };
 
   return (
     <div className="videoPlayer">
-      <div id="videoID">
-      <iframe key={link} id="player" type="text/html" width="640" height="390"
-        src={link}
-        frameborder="0" title="videoTitle"></iframe>
-      </div>
+      <YouTube 
+        videoId={props.link} 
+        opts={opts}
+        onPause={props.onPause}/>
     </div>
   );
 }
