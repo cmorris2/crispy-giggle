@@ -4,12 +4,12 @@ type Note @model {
   description: String
 }
 
-type spotlightVideo @model {
+type spotlightVideo @model  {
   id:ID!
   link: String
   name: String
   videoId: String
-  beginAt: String @function(name: "videoTimerFunction-${env}")
+  beginAt: String  @function(name: "videoTimerFunction-${env}")
   isFinishedPlaying: Boolean
-  duration: Int
+  duration: Int 
 }

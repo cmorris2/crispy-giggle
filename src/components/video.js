@@ -8,22 +8,29 @@ import YouTube from 'react-youtube';
 
 function Video(props) {
 
-  const opts = {
-    height: '390',
-    width: '640',
-    playerVars: {
-      // https://developers.google.com/youtube/player_parameters
-      autoplay: 1,
-      start: props.beginAt
-    },
-  };
+  console.log("rendering video component: ")
+  console.log(props)
 
   return (
     <div className="videoPlayer">
       <YouTube 
-        videoId={props.link} 
-        opts={opts}
-        onPause={props.onPause}/>
+        key={props.lastUpdate}
+        videoId={props.videoId}
+        id={props.lastUpdate}
+        onPlay={props.onPlay}
+        onPause={props.onPause}
+        onReady={props.onReady}
+        opts={{
+          height: '390',
+          width: '640',
+          playerVars: {
+            // https://developers.google.com/youtube/player_parameters
+            autoplay: props.autoplay,
+            start: props.beginAt,
+            mute: 1
+          },
+        }}
+        />
     </div>
   );
 }

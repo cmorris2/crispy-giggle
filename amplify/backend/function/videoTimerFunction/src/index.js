@@ -1,9 +1,9 @@
-const axios = require("axios");
 const moment = require("moment");
 
 
 
 exports.handler =  async function(event, context) {
+  console.log("videoTimer function triggerred")
   let updatedAt = event.source.updatedAt
   let duration = event.source.duration
   let updatedAtDateTime = new Date(updatedAt)
@@ -15,6 +15,7 @@ exports.handler =  async function(event, context) {
   console.log(diffSecs)
 
   if (diffSecs > duration){
+    //video is over
     return null
   }
   return diffSecs

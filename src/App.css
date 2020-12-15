@@ -56,6 +56,12 @@ border-color:red;
   color: white;
 }
 
+.alertLive {
+  padding: 5px;
+  background-color: #4CAF50;
+  color: white;
+}
+
 .closebtn {
   margin-left: 15px;
   color: white;
