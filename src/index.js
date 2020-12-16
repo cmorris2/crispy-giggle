@@ -3,9 +3,19 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+//import MyInfo from './MyInfo';
 import Amplify from 'aws-amplify';
 import config from './aws-exports';
 Amplify.configure(config);
+
+// const subscription = API.graphql(
+//   graphqlOperation(onUpdateSpotlightVideo)
+// ).subscribe({
+//   next: ({ provider, value }) => {
+//     console.log("subscription UPDATE!")
+//     console.log(value.data.onUpdateSpotlightVideo)
+//     }
+// });
 
 ReactDOM.render(
   <React.StrictMode>

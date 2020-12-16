@@ -43,3 +43,57 @@ export const deleteNote = /* GraphQL */ `
     }
   }
 `;
+export const createSpotlightVideo = /* GraphQL */ `
+  mutation CreateSpotlightVideo(
+    $input: CreateSpotlightVideoInput!
+    $condition: ModelspotlightVideoConditionInput
+  ) {
+    createSpotlightVideo(input: $input, condition: $condition) {
+      id
+      link
+      name
+      videoId
+      beginAt
+      isFinishedPlaying
+      duration
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const updateSpotlightVideo = /* GraphQL */ `
+  mutation UpdateSpotlightVideo(
+    $input: UpdateSpotlightVideoInput!
+    $condition: ModelspotlightVideoConditionInput
+  ) {
+    updateSpotlightVideo(input: $input, condition: $condition) {
+      id
+      link
+      name
+      videoId
+      beginAt
+      isFinishedPlaying
+      duration
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const deleteSpotlightVideo = /* GraphQL */ `
+  mutation DeleteSpotlightVideo(
+    $input: DeleteSpotlightVideoInput!
+    $condition: ModelspotlightVideoConditionInput
+  ) {
+    deleteSpotlightVideo(input: $input, condition: $condition) {
+      id
+      link
+      name
+      videoId
+      beginAt
+      isFinishedPlaying
+      duration
+      createdAt
+      updatedAt
+    }
+  }
+`;

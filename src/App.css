@@ -36,3 +36,43 @@
     transform: rotate(360deg);
   }
 }
+
+
+hr { 
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+border-color:red;
+} 
+
+
+.alert {
+  padding: 5px;
+  background-color: #ff9800;;
+  color: white;
+}
+
+.alertLive {
+  padding: 5px;
+  background-color: #4CAF50;
+  color: white;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}

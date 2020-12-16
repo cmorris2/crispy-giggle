@@ -34,3 +34,48 @@ export const onDeleteNote = /* GraphQL */ `
     }
   }
 `;
+export const onCreateSpotlightVideo = /* GraphQL */ `
+  subscription OnCreateSpotlightVideo {
+    onCreateSpotlightVideo {
+      id
+      link
+      name
+      videoId
+      beginAt
+      isFinishedPlaying
+      duration
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onUpdateSpotlightVideo = /* GraphQL */ `
+  subscription OnUpdateSpotlightVideo {
+    onUpdateSpotlightVideo {
+      id
+      link
+      name
+      videoId
+      beginAt
+      isFinishedPlaying
+      duration
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onDeleteSpotlightVideo = /* GraphQL */ `
+  subscription OnDeleteSpotlightVideo {
+    onDeleteSpotlightVideo {
+      id
+      link
+      name
+      videoId
+      beginAt
+      isFinishedPlaying
+      duration
+      createdAt
+      updatedAt
+    }
+  }
+`;

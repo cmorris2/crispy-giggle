@@ -3,3 +3,13 @@ type Note @model {
   name: String!
   description: String
 }
+
+type spotlightVideo @model  {
+  id:ID!
+  link: String
+  name: String
+  videoId: String
+  beginAt: String  @function(name: "videoTimerFunction-${env}")
+  isFinishedPlaying: Boolean
+  duration: Int 
+}
