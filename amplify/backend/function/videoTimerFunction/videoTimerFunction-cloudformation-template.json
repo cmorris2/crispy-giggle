@@ -68,7 +68,7 @@
         "Layers": [],
         "Timeout": "25",
         "Code": {
-          "S3Bucket": "amplify-greatestappever-dev-142932-deployment",
+          "S3Bucket": "amplify-greatestappever-test-184517-deployment",
           "S3Key": "amplify-builds/videoTimerFunction-354e62454c34576e596e-build.zip"
         }
       }
